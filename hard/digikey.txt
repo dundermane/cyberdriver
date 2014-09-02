@@ -1,0 +1,31 @@
+Web ID,Access ID,Salesorder Number,Shipping Method,Payment Method,
+106848326,12751,40030571,UPS Ground (order by 8:00 PM CT),VISA,
+
+Shipping Address
+First Name,Last Name,Company,Mail Stop,Address Line 1,Address Line 2,City,State,Postal Code,Country,Email Address,Telephone,
+Matt,Ewing,,,1 Pleasant St.,Apt. 620,Rochester,NY,14604,USA,,7813301215,
+
+Billing Address
+First Name,Last Name,Company,Mail Stop,Address Line 1,Address Line 2,City,State,Postal Code,Country,Email Address,Telephone,
+Matt,Ewing,makersauce.com,,1 Pleasant St.,Apt. 620,Rochester,NY,14604,USA,,,
+
+Index,Quantity,Part Number,Description,Customer Reference,Available Quantity,Backorder Quantity,Unit Price USD,Extended Price USD,
+1,5,ATTINY2313A-SURCT-ND,IC MCU 8BIT 2KB FLASH 20SOIC,,5,0,1.71000,8.55,
+2,3,XC1611CT-ND,CRYSTAL 16MHZ 9PF SMD,,3,0,2.06000,6.18,
+3,5,PCD2331CT-ND,INDUCTOR 56UH FIXED 1210 5%,,5,0,0.45000,2.25,
+4,5,BAT54HT1GCT-ND,DIODE SCHOTTKY 30V 0.2A SOD323,,5,0,0.30000,1.50,
+5,4,296-1014-1-ND,IC OPAMP GP 700KHZ 8SOIC,,4,0,0.55000,2.20,
+6,100,490-1532-1-ND,CAP CER 0.1UF 16V 10% X7R 0603,,100,0,0.00860,0.86,
+7,10,2N7002KCT-ND,MOSFET N-CH 60V 300MA SOT23,,10,0,0.25800,2.58,
+8,4,BZT52C2V0S-7FDICT-ND,DIODE ZENER 2V 200MW SOD323,,4,0,0.28000,1.12,
+9,4,DDZ9V1CSDICT-ND,DIODE ZENER 9.07V 200MW SOD323,,4,0,0.70000,2.80,
+10,25,YC164J-20KCT-ND,RES ARRAY 20K OHM 4 RES 1206,,25,0,0.02600,0.65,
+11,25,YC164J-10KCT-ND,RES ARRAY 10K OHM 4 RES 1206,,25,0,0.02600,0.65,
+12,10,MCT0603-330-CFCT-ND,RES 330 OHM 1/8W 1% SMD 0603,,10,0,0.06900,0.69,
+13,10,MCT0603-1.00K-CFCT-ND,RES 1.00K OHM 1/8W 1% SMD 0603,,10,0,0.06900,0.69,
+14,10,MCT0603-100K-CFCT-ND,RES 100K OHM 1/8W 1% SMD 0603,,10,0,0.06900,0.69,
+15,20,MCT0603-10.0K-CFCT-ND,RES 10.0K OHM 1/8W 1% SMD 0603,,20,0,0.06900,1.38,
+,,,,,,Subtotal,32.79
+,,,,,,Shipping,unknown
+,,,,,,Estimated Sales Tax,2.62
+,,,,,,Total,unknown
