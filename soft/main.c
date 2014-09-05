@@ -16,6 +16,14 @@ logical 1 :  PORTB |= (1<<PB0);
 #define d_a2 PD4
 #define d_a3 PD6
 
+#define b_HODL PB5
+#define b_HPL PB4
+#define b_HCK PB3
+#define b_VCK PB7
+#define b_VPL PB6
+#define b_RENE PB2
+#define b_RENO PB1
+
 void delay_ms(uint8_t ms) {
 	uint16_t delay_count = 16000 / 64;
 	volatile uint16_t i;
@@ -28,22 +36,31 @@ void delay_ms(uint8_t ms) {
 
 void a_vid(uint8_t grey) {
 	
-	PORTD = 0x00;
-	PORTD |= ((grey % 2) << d_a0);
-	grey >> 1;
-	PORTD |= ((grey % 2) << d_a1);
-	grey >> 1;
-	PORTD |= ((grey % 2) << d_a2);
-	grey >> 1;
-	PORTD |= ((grey % 2) << d_a3);
-	grey >> 1;
+
+	PORTD &= ~(1<<d_a0);
+	PORTD |= (grey % 2 << d_a0);
+	PORTD &= ~(1<<d_a1);
+	PORTD |= ((grey >> 1) % 2 << d_a1);
+	PORTD &= ~(1<<d_a2);
+	PORTD |= ((grey >> 2) % 2 << d_a2);
+	PORTD &= ~(1<<d_a3);
+	PORTD |= ((grey >> 3) % 2 << d_a3);
 	
+}
+
+void dumpOnScreen(uint8_t rows, uint8_t cols, uint8_t *img){
+
+//img is a pointer for the first item in array
+
+
 }
 
 int main(void) {
 	
 	DDRD = 0xFF;  //All digital outs to 0
+	DDRB = 0xFF;
 	PORTD = 0x00;
+	PORTB = 0x00;
 
 
 /**********
@@ -59,14 +76,31 @@ int main(void) {
     TCCR0A |= (1 << COM0B1); //OC0B duty low on compare match
     TCCR0B |= (1 << CS00);   //Clock Divider for pwm 
 
+/************
+ DISPLAY INIT
+************/
     
-    
+	uint8_t image[40] = {0x3, 0x3, 0x3, 0x3, 0x3, 0x3,
+					   0x3, 0x3, 0x3, 0x3, 0x3, 0x3,
+					   0x3, 0x3, 0x3, 0x3, 0x3, 0x3,
+					   0x3, 0x3, 0x3, 0x3, 0x3, 0x3,
+					   0x3, 0x3, 0x3, 0x3, 0x3, 0x3,
+					   0x3, 0x3, 0x3, 0x3, 0x3, 0x3};
+	
+    uint8_t *img;
+
+/***********
+ Main Loop
+***********/
 	for(;;) {
-		uint8_t i;
-		for(i = 0; i < 7; i++){
-			a_vid(i);
-			delay_ms(2000);
-		}
+	
+	
+		a_vid(0);
+		delay_ms(2000);
+		a_vid(15);
+		delay_ms(2000);
+
+		dumpOnScreen(6,6,&img[0]);		
 	}
 
 	return 0;
