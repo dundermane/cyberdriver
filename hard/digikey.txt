@@ -1,13 +1,4 @@
-Web ID,Access ID,Salesorder Number,Shipping Method,Payment Method,
-106848326,12751,40030571,UPS Ground (order by 8:00 PM CT),VISA,
 
-Shipping Address
-First Name,Last Name,Company,Mail Stop,Address Line 1,Address Line 2,City,State,Postal Code,Country,Email Address,Telephone,
-Matt,Ewing,,,1 Pleasant St.,Apt. 620,Rochester,NY,14604,USA,,7813301215,
-
-Billing Address
-First Name,Last Name,Company,Mail Stop,Address Line 1,Address Line 2,City,State,Postal Code,Country,Email Address,Telephone,
-Matt,Ewing,makersauce.com,,1 Pleasant St.,Apt. 620,Rochester,NY,14604,USA,,,
 
 Index,Quantity,Part Number,Description,Customer Reference,Available Quantity,Backorder Quantity,Unit Price USD,Extended Price USD,
 1,5,ATTINY2313A-SURCT-ND,IC MCU 8BIT 2KB FLASH 20SOIC,,5,0,1.71000,8.55,
